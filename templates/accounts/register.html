@@ -1,0 +1,94 @@
+{% extends 'base/base.html' %}
+{% block title %} Register{% endblock %}
+{% block start %}
+
+<main class="main__content_wrapper">
+    <!-- Start login section  -->
+    <div class="login__section section--padding" style="background-color:#fcba03;">
+        <div class="container">
+            <form method="POST">
+                {% csrf_token %}
+                <div class="login__section--inner">
+                    <div class="row">
+                        <div class="col">
+                            <div class="account__login">
+                                <div class="row">
+                                    <div class="col">
+                                        <img class="" src="/media/img/blog/blog-page-big1.png" alt="portfolio-img" style = "width:650px; height:500px">
+                                    </div>
+                                    <div class="col">
+                                        <div class="account__login--header mb-25">
+                                            <h2 class="account__login--header__title h3 mb-10">Welcome to Online's Largest <br>Fashion Selling Site.</h2>
+                                            <p class="account__login--header__desc">Register, to dive into the world of fashion!</p>
+                                        </div>
+                                            {% include "base/alert.html" %}
+                                        <div class="account__login--inner">
+                                            <input class="account__login--input" placeholder="First Name" name="first_name" type="text" required>
+                                            <input class="account__login--input" placeholder="Last Name" name="last_name" type="text" required>
+                                            <input class="account__login--input" placeholder="Email" name="email" type="email" required>
+                                            <input class="account__login--input" placeholder="Password" name="password" type="password" required>
+                                            {% comment %} <input class="account__login--input" placeholder="Confirm Password" type="password" required> {% endcomment %}
+                                            <button class="primary__btn slider__btn mb-10" type="submit">Submit & Register</button>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>     
+    </div>
+    <!-- End login section  -->
+    <br>
+
+    <!-- Start shipping section -->
+    <section class="shipping__section2 shipping__style3 section--padding pt-0">
+        <div class="container">
+            <div class="shipping__section2--inner shipping__style3--inner d-flex justify-content-between">
+                <div class="shipping__items2 d-flex align-items-center">
+                    <div class="shipping__items2--icon">
+                        <img src="/media/img/other/shipping1.png" alt="">
+                    </div>
+                    <div class="shipping__items2--content">
+                        <h2 class="shipping__items2--content__title h3">Shipping</h2>
+                        <p class="shipping__items2--content__desc">From handpicked sellers</p>
+                    </div>
+                </div>
+                <div class="shipping__items2 d-flex align-items-center">
+                    <div class="shipping__items2--icon">
+                        <img src="/media/img/other/shipping2.png" alt="">
+                    </div>
+                    <div class="shipping__items2--content">
+                        <h2 class="shipping__items2--content__title h3">Payment</h2>
+                        <p class="shipping__items2--content__desc">From handpicked sellers</p>
+                    </div>
+                </div>
+                <div class="shipping__items2 d-flex align-items-center">
+                    <div class="shipping__items2--icon">
+                        <img src="/media/img/other/shipping3.png" alt="">
+                    </div>
+                    <div class="shipping__items2--content">
+                        <h2 class="shipping__items2--content__title h3">Return</h2>
+                        <p class="shipping__items2--content__desc">From handpicked sellers</p>
+                    </div>
+                </div>
+                <div class="shipping__items2 d-flex align-items-center">
+                    <div class="shipping__items2--icon">
+                        <img src="/media/img/other/shipping4.png" alt="">
+                    </div>
+                    <div class="shipping__items2--content">
+                        <h2 class="shipping__items2--content__title h3">Support</h2>
+                        <p class="shipping__items2--content__desc">From handpicked sellers</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End shipping section -->
+
+</main>
+    
+{% endblock %}
+    
